@@ -1,9 +1,10 @@
+package com.scotia;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 public abstract class Passenger {
 	private String Fname;
@@ -16,12 +17,12 @@ public abstract class Passenger {
 	// classes
 	protected int Discount = 0;
 
-	// private Book Reservation;
+	// private com.scotia.Book Reservation;
 	private ArrayList<Book> Reservations = new ArrayList<>();
 	private File ReservationFile;
 	private String Type;
 
-	// we create an abstract method, because the extent classes(Ordinary,Business,Island) have their own discounts.
+	// we create an abstract method, because the extent classes(com.scotia.Ordinary,com.scotia.Business,com.scotia.Island) have their own discounts.
 	public abstract int getDiscount();
 
 	public Book getReservationByNumber(int number) {
@@ -93,7 +94,7 @@ public abstract class Passenger {
 	}
 
 	/*
-	 * public Book getReservation() { return Reservation; }
+	 * public com.scotia.Book getReservation() { return Reservation; }
 	 */
 
 	public String getType() {
@@ -113,7 +114,7 @@ public abstract class Passenger {
 	}
 
 	/*
-	 * public void setReservation(Book reservation) { Reservation = reservation;
+	 * public void setReservation(com.scotia.Book reservation) { Reservation = reservation;
 	 * }
 	 */
 
@@ -194,7 +195,7 @@ public abstract class Passenger {
 			writer.write("Discount=" + Integer.toString(this.getDiscount()) + "%");
 			writer.newLine(); // Skip a line
 			if (pBook.getSuitCase()) { // Suitcase Boolean
-				writer.write("Suit_case=50£");
+				writer.write("Suit_case=50ï¿½");
 				writer.newLine();
 			}
 			// Casting from double to String for text file
@@ -224,9 +225,9 @@ public abstract class Passenger {
 			}
 		}
 		
-		//Print Passenger info on txt file
+		//Print com.scotia.Passenger info on txt file
 
-	    writer.write("******* Passenger details *******");
+	    writer.write("******* com.scotia.Passenger details *******");
 		writer.newLine();
 		writer.write("Name=" + this.getFname());
 		writer.newLine();

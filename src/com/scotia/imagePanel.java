@@ -1,4 +1,4 @@
-
+package com.scotia;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;

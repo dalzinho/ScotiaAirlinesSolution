@@ -1,3 +1,5 @@
+package com.scotia;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -40,7 +42,7 @@ public class AirlineManager {
 			{
 				input = new BufferedReader(new FileReader(pFile));				
 				line = input.readLine();	
-				// parsing Flight info	
+				// parsing com.scotia.Flight info
 				while (line != null) 
 				{		
 					if (line.contains("Reservation_number")) {					

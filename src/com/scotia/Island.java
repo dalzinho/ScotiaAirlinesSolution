@@ -1,3 +1,5 @@
+package com.scotia;
+
 public class Island extends Passenger {
 	
 	protected int Discount = 10; // var overwritten for applying discount

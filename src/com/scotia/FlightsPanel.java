@@ -1,6 +1,7 @@
+package com.scotia;
+
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Date;
 
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
@@ -16,9 +17,6 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JToggleButton;
-import javax.swing.ListModel;
-import javax.swing.JComboBox;
 
 public class FlightsPanel extends JPanel {
 	private Flight flightSelected = null;
@@ -44,7 +42,7 @@ public class FlightsPanel extends JPanel {
 		return list;
 	}
 
-	// show Flight info when selected, with function getFlightbynumber
+	// show com.scotia.Flight info when selected, with function getFlightbynumber
 	private void displayFlight(String number) {
 		flightSelected = MainMenu.getAirlineMgr().getFlightByNumber(number);
 		textFieldDepartureAirport.setText(flightSelected.getDepartureAirport());

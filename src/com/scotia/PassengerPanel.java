@@ -1,3 +1,5 @@
+package com.scotia;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,8 +16,6 @@ import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ContainerAdapter;
-import java.awt.event.ContainerEvent;
 
 
 public class PassengerPanel extends JPanel {
@@ -181,27 +181,27 @@ public class PassengerPanel extends JPanel {
 		btnOk.setBounds(434, 266, 89, 23);
 		add(btnOk);
 		
-		JLabel lblNewJgoodiesTitle = DefaultComponentFactory.getInstance().createTitle("Passenger info:");
+		JLabel lblNewJgoodiesTitle = DefaultComponentFactory.getInstance().createTitle("com.scotia.Passenger info:");
 		lblNewJgoodiesTitle.setBackground(Color.ORANGE);
 		lblNewJgoodiesTitle.setForeground(Color.BLACK);
 		lblNewJgoodiesTitle.setBounds(10, 7, 430, 14);
 		add(lblNewJgoodiesTitle);
 		
-		//Passenger type
+		//com.scotia.Passenger type
 		
-		JLabel lblNewLabel_1 = new JLabel("Passenger type:");
+		JLabel lblNewLabel_1 = new JLabel("com.scotia.Passenger type:");
 		lblNewLabel_1.setBounds(10, 129, 220, 14);
 		add(lblNewLabel_1);
 		
-		rdbtnOrdinary = new JRadioButton("Ordinary");
+		rdbtnOrdinary = new JRadioButton("com.scotia.Ordinary");
 		rdbtnOrdinary.setBounds(10, 150, 80, 23);
 		add(rdbtnOrdinary);		
 		
-	    rdbtnIsland = new JRadioButton("Island");
+	    rdbtnIsland = new JRadioButton("com.scotia.Island");
 		rdbtnIsland.setBounds(92, 150, 69, 23);
 		add(rdbtnIsland);
 		
-		rdbtnBusiness = new JRadioButton("Business");
+		rdbtnBusiness = new JRadioButton("com.scotia.Business");
 		rdbtnBusiness.setBounds(163, 150, 86, 23);
 		add(rdbtnBusiness);
 		

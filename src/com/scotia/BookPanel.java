@@ -1,3 +1,5 @@
+package com.scotia;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
@@ -80,7 +82,7 @@ public class BookPanel extends JPanel {
 
 	private Boolean ValidateBooking(Flight flight) {
 
-		// checks Flight status in order to proceed with booking
+		// checks com.scotia.Flight status in order to proceed with booking
 		return (flight.getFlightStatus() == Flight.Status.AVAILABLE)
 				|| (flight.getFlightStatus() == Flight.Status.CHECKING);
 
@@ -110,7 +112,7 @@ public class BookPanel extends JPanel {
 		label_4.setBounds(227, 69, 112, 14);
 		add(label_4);
 
-		JLabel lblFlightStatus1 = new JLabel("Flight Status:");
+		JLabel lblFlightStatus1 = new JLabel("com.scotia.Flight Status:");
 		lblFlightStatus1.setBounds(109, 108, 99, 14);
 		add(lblFlightStatus1);
 
@@ -146,7 +148,7 @@ public class BookPanel extends JPanel {
 		lblFlightStatus.setBounds(109, 123, 99, 23);
 		add(lblFlightStatus); // adds info
 
-		JLabel lblPassengerInfo = new JLabel("Passenger info:");
+		JLabel lblPassengerInfo = new JLabel("com.scotia.Passenger info:");
 		lblPassengerInfo.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPassengerInfo.setBounds(109, 157, 99, 14);
 		add(lblPassengerInfo);
@@ -233,7 +235,7 @@ public class BookPanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				lblTotalCost.setText(Double.toString(
 						CalculateTotalCost(flightSelected, passenger.getDiscount(), chckbxNewCheckBox.isSelected()))
-						+ "£");
+						+ "ï¿½");
 			}
 		});
 		chckbxNewCheckBox.setBounds(427, 201, 142, 23);
@@ -257,7 +259,7 @@ public class BookPanel extends JPanel {
 				//Panel dialog if passenger has not been created
 
 				if (lbPassengerName.getText().equals("")) { 
-					JOptionPane.showMessageDialog(null, "Please go back to Passenger menu and enter details");
+					JOptionPane.showMessageDialog(null, "Please go back to com.scotia.Passenger menu and enter details");
 
 				}
 
@@ -295,7 +297,7 @@ public class BookPanel extends JPanel {
 				lbArrivalAirport.setText(flightSelected.getArrivalAirport());
 				lbDepartureDate.setText(AirlineManager.formatter.format(flightSelected.getDepartureDate()));
 				lbArrivalDate.setText(AirlineManager.formatter.format(flightSelected.getArrivalDate()));
-				lbCost.setText(Double.toString(flightSelected.getCost()) + "£");
+				lbCost.setText(Double.toString(flightSelected.getCost()) + "ï¿½");
 
 				PopulateAvailableSeats(flightSelected, cbSeats);
 
@@ -303,7 +305,7 @@ public class BookPanel extends JPanel {
 
 					lblTotalCost.setText(Double.toString(
 							CalculateTotalCost(flightSelected, passenger.getDiscount(), chckbxNewCheckBox.isSelected()))
-							+ "£");
+							+ "ï¿½");
 
 				}
 				// if statement for STATUS

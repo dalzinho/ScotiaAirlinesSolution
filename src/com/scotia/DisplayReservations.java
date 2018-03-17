@@ -1,3 +1,5 @@
+package com.scotia;
+
 import javax.swing.JPanel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -86,7 +88,7 @@ public class DisplayReservations extends JPanel {
 		lbFlightStatus.setBounds(109, 121, 99, 23);
 		add(lbFlightStatus);
 
-		JLabel label_9 = new JLabel("Flight Status:");
+		JLabel label_9 = new JLabel("com.scotia.Flight Status:");
 		label_9.setBounds(109, 106, 99, 14);
 		add(label_9);
 
@@ -103,7 +105,7 @@ public class DisplayReservations extends JPanel {
 		label_1.setBounds(109, 180, 69, 14);
 		add(label_1);
 
-		JLabel label_2 = new JLabel("Passenger info:");
+		JLabel label_2 = new JLabel("com.scotia.Passenger info:");
 		label_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		label_2.setBounds(109, 155, 99, 14);
 		add(label_2);
@@ -168,7 +170,7 @@ public class DisplayReservations extends JPanel {
 		lbTotalCost.setBounds(449, 224, 73, 23);
 		add(lbTotalCost);
 
-		JLabel lblSeat = new JLabel("Seat:");
+		JLabel lblSeat = new JLabel("com.scotia.Seat:");
 		lblSeat.setBounds(385, 130, 37, 14);
 		add(lblSeat);
 
@@ -196,12 +198,12 @@ public class DisplayReservations extends JPanel {
 				lbArrivalAirport.setText(flightSelected.getArrivalAirport());
 				lbDepartureDate.setText(AirlineManager.formatter.format(flightSelected.getDepartureDate()));
 				lbArrivalDate.setText(AirlineManager.formatter.format(flightSelected.getArrivalDate()));
-				lbCost.setText(Double.toString(flightSelected.getCost()) + "£");
+				lbCost.setText(Double.toString(flightSelected.getCost()) + "ï¿½");
 				lbSeat.setText(bookSelected.getSeat().getSeatNo());
-				lbTotalCost.setText(bookSelected.getTotalCost().toString() + "£");
+				lbTotalCost.setText(bookSelected.getTotalCost().toString() + "ï¿½");
 
 				if (bookSelected.getSuitCase()) {
-					lbSuitCase.setText("Suite case (+50€)");
+					lbSuitCase.setText("Suite case (+50ï¿½)");
 				} else {
 					lbSuitCase.setText("");
 				}

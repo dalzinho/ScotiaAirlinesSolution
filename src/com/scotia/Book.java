@@ -1,3 +1,5 @@
+package com.scotia;
+
 import java.util.Date;
 
 public class Book {

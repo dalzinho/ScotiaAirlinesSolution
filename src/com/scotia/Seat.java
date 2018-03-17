@@ -1,3 +1,4 @@
+package com.scotia;
 
 public class Seat {
 	

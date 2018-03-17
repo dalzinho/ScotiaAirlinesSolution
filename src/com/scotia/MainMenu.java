@@ -1,3 +1,5 @@
+package com.scotia;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -8,15 +10,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import java.awt.Color;
 import javax.swing.JTextArea;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactoryConfigurationError;
 import java.awt.Font;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.text.SimpleDateFormat;
 
-import javax.swing.JPanel;
 import java.util.Date;
 
 public class MainMenu {
@@ -71,7 +67,7 @@ public class MainMenu {
 		frame.setVisible(true);
 	}
 	
-	public static void displayBook() { // show Book panel
+	public static void displayBook() { // show com.scotia.Book panel
 		enableMenus(false); //disable menus
 		
 		BookPanel = new BookPanel();
@@ -164,7 +160,7 @@ public class MainMenu {
 		menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);		
 		
-		JMenu mnPassenger = new JMenu("Passenger");
+		JMenu mnPassenger = new JMenu("com.scotia.Passenger");
 		menuBar.add(mnPassenger);  
 		
 		JMenuItem mntmNewPassenger = new JMenuItem("Add or Edit Passanger");
@@ -175,10 +171,10 @@ public class MainMenu {
 		});
 		mnPassenger.add(mntmNewPassenger);
 		
-		JMenu mnFlight = new JMenu("Flight");
+		JMenu mnFlight = new JMenu("com.scotia.Flight");
 		menuBar.add(mnFlight);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Book a flight");
+		JMenuItem mntmNewMenuItem = new JMenuItem("com.scotia.Book a flight");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				displayBook();
